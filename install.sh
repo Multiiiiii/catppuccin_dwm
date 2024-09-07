@@ -104,7 +104,7 @@ if [[ $yn == [Yy]* ]]; then
 |_| \\_|\\___|\\___/  |_____|
 
 "
-.scripts/neoboard.sh
+./scripts/neoboard.sh
 else
     echo "Skipping the command..."
 fi
@@ -121,7 +121,7 @@ echo "
 |  _| (_| \\__ \\ |_|  _|  __/ || (__| | | |
 |_|  \\__,_|___/\\__|_|  \\___|\\__\\___|_| |_|
 "
-.scripts/fast.sh
+./scripts/fast.sh
 echo "
  _   _        ____ _               _
 | \\ | |_   __/ ___| |__   __ _  __| |
