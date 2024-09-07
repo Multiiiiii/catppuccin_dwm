@@ -1,0 +1,5 @@
+#! /bin/sh
+
+wall=$(find $HOME/Pictures/Wall/ -type f | shuf -n 1)
+xwallpaper --zoom $wall 
+betterlockscreen -u $wall
