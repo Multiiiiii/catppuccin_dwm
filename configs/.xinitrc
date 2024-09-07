@@ -1,5 +1,9 @@
+xrdb ~/.Xresources
 slstatus &
-xcompmgr -c &
+libinput-gestures-setup start &
+# xcompmgr -c &
+picom &
+# compfy &
 unclutter &
 setbg &
 /home/m/ &
