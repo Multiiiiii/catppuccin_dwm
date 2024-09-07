@@ -1,4 +1,5 @@
 autojump
+ueberzug
 kitty
 bc
 udiskie-dmenu-git
