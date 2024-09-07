@@ -44,6 +44,7 @@ static const Rule rules[] = {
 	{ "Mullvad VPN",   NULL,     NULL,           1 << 6,    1,          0,          -1,        -1,       0  },
 	{ "qBittorrent",   NULL,     NULL,           1 << 6,    0,          0,          -1,        -1,       0  },
 	{ "St",            NULL,     NULL,           0,         0,          1,           0,        -1,       0  },
+	{ "kitty",         NULL,     NULL,           0,         0,          1,           0,        -1,       0  },
 	{ NULL,            NULL,     "Event Tester", 0,         0,          0,           1,        -1,       0  }, /* xev */
 	{ NULL,            NULL,     "scratchpad",   0,         1,          1,           0,        -1,      's' },
 	{ "vesktop",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
@@ -121,7 +122,8 @@ static const char *brightdowncmd[] = { "brightnessctl", "set", "10-", NULL };
 static const char *lockcmd[] = { "betterlockscreen", "-l", NULL };
 static const char *screencmd[] = { "screen", NULL };
 static const char *browsercmd[]  = { "mullvad-browser", NULL };
-static const char *filemanagercmd[]  = { "st", "./.config/vifm/scripts/vifmrun", NULL };
+static const char *filemanagercmd2[]  = { "st", "./.config/vifm/scripts/vifmrun", NULL };
+static const char *filemanagercmd[]  = { "kitty", "./.config/vifm/scripts/vifmrun", NULL };
 static const char *discordcmd[]  = { "vesktop", NULL };
 static const char *emailcmd[]  = { "thunderbird", NULL };
 static const char *calccmd[]  = { "st", "bc", NULL };
@@ -162,14 +164,15 @@ static const Key keys[] = {
   { Mod4Mask,                     XK_q,      spawn,          {.v = screencmd } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = filemanagercmd } },
+	{ MODKEY|Mod4Mask,             XK_e,      spawn,          {.v = filemanagercmd2 } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = discordcmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = emailcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|Mod4Mask,              XK_Return, spawn,          {.v = termcmd2 } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd2 } },
+	{ MODKEY|Mod4Mask,              XK_Return, spawn,          {.v = termcmd } },
 
- 	{ MODKEY,                       XK_grave,          togglescratch,  {.v = scratchpadcmd } },
- 	{ MODKEY|Mod4Mask,              XK_grave,          togglescratch,  {.v = scratchpad2cmd } },
+ 	{ MODKEY,                       XK_grave,          togglescratch,  {.v = scratchpad2cmd } },
+ 	{ MODKEY|Mod4Mask,              XK_grave,          togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_minus,        scratchpad_show,  {0} },
 	{ MODKEY|ShiftMask,             XK_minus,        scratchpad_hide,  {0} },
 	{ MODKEY,                       XK_asciicircum,scratchpad_remove,  {0} },
