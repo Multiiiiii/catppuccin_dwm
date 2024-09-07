@@ -91,3 +91,6 @@ xorg-xwud
 xwallpaper
 yt-dlp
 zip
+zsh
+oh-my-zsh-git
+zsh-theme-powerlevel10k-git
