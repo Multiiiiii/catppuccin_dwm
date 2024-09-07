@@ -8,8 +8,8 @@ if [[ $yn == [Yy]* ]]; then
   echo "Skipping..."
 
 else
- sudo mv dwm.desktop /usr/share/xsessions/
- sudo mv dwm.sh /usr/local/bin/
+ sudo cp dwm.desktop /usr/share/xsessions/
+ sudo cp dwm.sh /usr/local/bin/
 fi
 
 
