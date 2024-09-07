@@ -1,0 +1,53 @@
+#!/bin/bash
+
+xrandr --output HDMI-A-0 --off
+xrandr --output Displayport-0 --off
+
+check_escape() {
+    if [ $? -ne 0 ]; then
+        exit 0  # Exit the script
+    fi
+}
+
+# Function to fetch available resolutions for a given output
+get_available_resolutions() {
+    xrandr | awk -v output="$1" '$1 == output && $2 == "connected" {getline; while ($1 ~ /^[0-9]+x[0-9]+$/) {print $1; getline}}'
+}
+
+# Define an associative array to map positions to xrandr arguments
+declare -A position_args=(
+    ["top"]="--above"
+    ["right"]="--right-of"
+    ["left"]="--left-of"
+    ["mirror"]="--same-as"
+)
+
+# Get primary output
+primary_output=$(xrandr | awk '/ primary/{print $1}')
+
+# Get all available output options
+available_outputs=$(xrandr | awk '/ connected/{print $1}')
+
+check_escape
+# Prompt to select output
+selected_output=$(printf "%s\n" "${available_outputs[@]}" | dmenu -l $(echo "$available_outputs" | wc -l) -i -p "Select output:")
+
+check_escape
+# Get the selected position from dmenu
+selected_position=$(printf "%s\n" "${!position_args[@]}" | dmenu -l ${#position_args[@]} -i -p "Select position:")
+
+
+check_escape
+# Get the available resolutions for the selected output
+resolutions=$(get_available_resolutions "$selected_output")
+
+check_escape
+# Get the selected resolution from dmenu
+selected_resolution=$(printf "%s\n" "${resolutions[@]}" | dmenu -l $(echo "$resolutions" | wc -l) -i -p "Select resolution:")
+
+# Apply the selected resolution using xrandr
+if [ -n "$selected_resolution" ] && [ -n "$selected_position" ] && [ -n "$selected_output" ]; then
+    xrandr --output "$selected_output" --mode "$selected_resolution" "${position_args[$selected_position]}" "$primary_output"
+    setbg
+fi
+

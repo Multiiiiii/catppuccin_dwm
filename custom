@@ -1,0 +1,47 @@
+default
+xkb_symbols "neo_better" {
+include "de(neo)"
+
+name[group1]="German (Neo, no useless)";
+
+    key.type[Group1] = "EIGHT_LEVEL_WITH_LEVEL5_LOCK";
+
+    // The Tab key has Compose on the third layer (Caps + Tab)
+    // --------------------------------------------------------------
+    key  <TAB> { [ Tab,                     ISO_Left_Tab,            Multi_key,               ISO_Level5_Lock,         NoSymbol,                NoSymbol,                NoSymbol,                ISO_Level5_Lock          ] };
+
+    // Number row
+    // --------------------------------------------------------------
+    key <TLDE> { [ grave,                   dead_caron,              U21BB,                   NoSymbol,                U22C1,           Pointer_EnableKeys,              emptyset,                NoSymbol                 ] };
+
+    key <AE01> { [ 1,                       degree,                  U261E,                   U2196,                   U22C0,                   NoSymbol,                notsign,                 NoSymbol                 ] };
+    key <AE02> { [ 2,                       section,                 U2202,                   U2194,                   U221E,                   NoSymbol,                logicalor,               NoSymbol                 ] };
+    key <AE03> { [ 3,                       U2113,                   U2713,                   U2197,                   variation,               U03B9,                   logicaland,              NoSymbol                 ] };
+    key <AE04> { [ 4,                       guillemotright,          U203A,                   U262D,                   U2623,                   U2126,                   U22A5,                   NoSymbol                 ] };
+    key <AE05> { [ 5,                       guillemotleft,           U2039,                   U2190,                   enfilledcircbullet,      U2102,                   U2221,                   NoSymbol                 ] };
+    key <AE06> { [ 6,                       dollar,                  cent,                    U2192,                   sterling,                U2207,                   U2225,                   NoSymbol                 ] };
+
+    key <AE07> { [ 7,                       EuroSign,                yen,                     U03F0,                   NoSymbol,                U2196,                   U22A2,                   NoSymbol                 ] };
+    key <AE08> { [ 8,                       doublelowquotemark,      singlelowquotemark,      U27E8,                   Tab,                     ISO_Left_Tab,            U22A8,                   NoSymbol                 ] };
+    key <AE09> { [ 9,                       leftdoublequotemark,     leftsinglequotemark,     U27E9,                   KP_Divide,               KP_Divide,               U2261,                   NoSymbol                 ] };
+    key <AE10> { [ 0,                       rightdoublequotemark,    rightsinglequotemark,    zerosubscript,           KP_Multiply,             KP_Multiply,             U2245,                   NoSymbol                 ] };
+
+    key <AE11> { [ minus,                   emdash,                  U230A,                   U2308,                   KP_Subtract,             KP_Subtract,             U2248,                   NoSymbol                 ] };
+    key <AE12> { [ plus,                    U3164,                   U230B,                   U2309,                   U21BE,                   NoSymbol,                U2286,                   NoSymbol                 ] };
+
+
+    key <AB09> { [ period,                  periodcentered    ,      apostrophe,              U03D1,                   KP_3,                    KP_3,                    U21A6,                   NoSymbol                 ] };
+
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC_WITH_LEVEL5_LOCK";
+    key <AC01> { [ u,                       U,                       backslash,               U2193,                   Home,                    Home,                    includedin,              NoSymbol                 ] };
+
+    key <AB01> { [ udiaeresis,              Udiaeresis,              numbersign,              Greek_xi,                Escape,                  Escape,                  union,                   NoSymbol                 ] };
+
+
+    key <AD01> { [ x,                       X,                       ellipsis,                U2199,                   Prior,                   Prior,                   Greek_XI,                NoSymbol                 ] };
+    key <AD02> { [ v,                       V,                       underscore,              U2198,                   BackSpace,               BackSpace,               radical,                 NoSymbol                 ] };
+
+    key.type[Group1] = "EIGHT_LEVEL_WITH_LEVEL5_LOCK";
+    key <AD12> { [ slash,                   U25A1,                   dead_stroke,             X,                       X,                       NoSymbol,                NoSymbol,                NoSymbol                 ] };
+
+};

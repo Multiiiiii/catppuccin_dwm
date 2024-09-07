@@ -1,0 +1,12 @@
+#!/bin/bash
+
+outputs=$(xrandr | awk '/ disconnected/{print $1}')
+
+selected_output=$(printf "%s\n" "${outputs[@]}" | dmenu -l $(echo "$outputs" | wc -l) -i -p "Select output to disconnect:")
+
+
+if [ -n "$selected_output" ]; then
+    xrandr --output "$selected_output" --off
+    setbg
+fi
+    
