@@ -1,4 +1,5 @@
 autojump
+kitty
 bc
 udiskie-dmenu-git
 libinput-gestures
