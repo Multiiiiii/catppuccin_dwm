@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp ~/catppuccin_dwm/configs/* ~/
+cp -rf ~/catppuccin_dwm/configs/* ~/
