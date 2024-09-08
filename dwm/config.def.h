@@ -47,6 +47,7 @@ static const Rule rules[] = {
 	{ "kitty",         NULL,     NULL,           0,         0,          1,           0,        -1,       0  },
 	{ NULL,            NULL,     "Event Tester", 0,         0,          0,           1,        -1,       0  }, /* xev */
 	{ NULL,            NULL,     "scratchpad",   0,         1,          1,           0,        -1,      's' },
+	{ "Mullvad Browser",      NULL,     NULL,   0,         1,          1,           0,        -1,      's' },
 	{ "vesktop",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
 	{ "ArmCord",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
 	{ "revolt-desktop",NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
