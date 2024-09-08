@@ -1,4 +1,6 @@
 autojump
+lxappearance
+qt5ct
 brightnessctl
 eza
 lolcat
