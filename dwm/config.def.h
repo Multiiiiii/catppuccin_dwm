@@ -176,7 +176,7 @@ static const Key keys[] = {
  	{ MODKEY|Mod4Mask,              XK_grave,          togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_minus,        scratchpad_show,  {0} },
 	{ MODKEY|ShiftMask,             XK_minus,        scratchpad_hide,  {0} },
-	{ MODKEY,                       XK_asciicircum,scratchpad_remove,  {0} },
+	{ MODKEY,                       XK_plus,       scratchpad_remove,  {0} },
 
 
   /*navigation*/
