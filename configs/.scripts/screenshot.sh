@@ -8,17 +8,17 @@ take_full_screenshot() {
 
 # Function to take a screenshot of the active window
 take_window_screenshot() {
-    ffcast -q -# "$(xdotool getactivewindow)" png ~/Pictures/screenshots/active"$(date +%F\ %T)".png > /dev/null 2>&1
+    ffcast -q -# "$(xdotool getactivewindow)" png ~/Pictures/Screenshots/active"$(date +%F\ %T)".png > /dev/null 2>&1
 }
 
 # Function to take a screenshot of a selected window
 take_select_screenshot() {
-    ffcast -fw png ~/Pictures/screenshots/select"$(date +%F\ %T)".png > /dev/null 2>&1
+    ffcast -fw png ~/Pictures/Screenshots/select"$(date +%F\ %T)".png > /dev/null 2>&1
 }
 
 # Function to take a screenshot of a selected area
 take_area_screenshot() {
-    ffcast -s trim png ~/Pictures/screenshots/area"$(date +%F\ %T)".png > /dev/null 2>&1
+    ffcast -s trim png ~/Pictures/Screenshots/area"$(date +%F\ %T)".png > /dev/null 2>&1
 }
 
 # Check the argument passed to the script
@@ -28,15 +28,12 @@ case "$1" in
         ;;
     "window")
         take_window_screenshot
-        nemo ~/Pictures/screenshots
         ;;
     "select")
         take_select_screenshot
-        nemo ~/Pictures/screenshots
         ;;
     "area")
         take_area_screenshot
-        nemo ~/Pictures/screenshots
         ;;
     *)
         echo "Invalid argument. Please use 'full', 'window', 'rectangle', or 'area'."
