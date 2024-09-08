@@ -29,7 +29,7 @@ else
 |___|_| |_|___/\\__\\__,_|_|_|_|_| |_|\\__, | |_|   \\__,_|_|   \\__,_|
                                     |___/
 "
-./getparu.sh
+./scripts/getparu.sh
 fi
 
 read -p "Do you have ChaoticAUR? [y/N]" yn
