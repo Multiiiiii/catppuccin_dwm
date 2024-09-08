@@ -4,5 +4,4 @@ slstatus &
 picom &
 unclutter &
 setbg &
-/home/m/ &
 exec dwm 

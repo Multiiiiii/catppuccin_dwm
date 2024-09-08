@@ -1,4 +1,6 @@
 autojump
+brightnessctl
+eza
 lolcat
 ueberzug
 kitty

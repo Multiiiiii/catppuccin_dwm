@@ -97,6 +97,8 @@ alias syncplay='QT_STYLE_OVERRIDE=kvantum-dark syncplay'
 alias dolphin='QT_STYLE_OVERRIDE=kvantum-dark dolphin'
 source /usr/share/autojump/autojump.zsh
 
+export PATH="$PATH:$HOME/.scripts"
+
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'

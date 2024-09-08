@@ -12,6 +12,7 @@ else
  sudo cp dwm.sh /usr/local/bin/
 fi
 
+sudo cp setbg /usr/bin/
 
 read -p "Do you have Paru? [y/N]" yn
 : ${yn:=n}
