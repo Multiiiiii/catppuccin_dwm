@@ -3,7 +3,7 @@
 
 # Function to take a screenshot of the entire screen
 take_full_screenshot() {
-    ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 -frames 1 ~/Pictures/screenshots/all"$(date +%F\ %T)".png > /dev/null 2>&1
+    ffmpeg -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2}') -i :0.0 -frames 1 ~/Pictures/Screenshots/all"$(date +%F\ %T)".png > /dev/null 2>&1
 }
 
 # Function to take a screenshot of the active window
