@@ -47,8 +47,8 @@ static const Rule rules[] = {
 	{ "firefox",       NULL,     NULL,           1 << 8,    0,          0,          -1,        -1,       0  },
 	{ NULL,            NULL,"Picture-in-Picture",0,         1,          0,          -1,        -1,       0  },
 	{ "Lollypop",      NULL,     NULL,           1 << 3,    0,          0,          -1,        -1,       0  },
-	{ "Mullvad VPN",   NULL,     NULL,           1 << 6,    1,          0,          -1,        -1,       0  },
-	{ "qBittorrent",   NULL,     NULL,           1 << 6,    0,          0,          -1,        -1,       0  },
+	{ "Mullvad VPN",   NULL,     NULL,           1 << 7,    1,          0,          -1,        -1,       0  },
+	{ "qBittorrent",   NULL,     NULL,           1 << 7,    0,          0,          -1,        -1,       0  },
 	{ "St",            NULL,     NULL,           0,         0,          1,           0,        -1,       0  },
 	{ "kitty",         NULL,     NULL,           0,         0,          1,           0,        -1,       0  },
 	{ NULL,            NULL,     "Event Tester", 0,         0,          0,           1,        -1,       0  }, /* xev */
