@@ -37,16 +37,16 @@ static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the b
 static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
 static const char *tagsel[][2] = {
-	{ "#ff0000", "#000000" },
-	{ "#ff7f00", "#000000" },
-	{ "#ffff00", "#000000" },
-	{ "#00ff00", "#000000" },
-	{ "#0000ff", "#000000" },
-	{ "#4b0082", "#000000" },
-	{ "#9400d3", "#000000" },
-	{ "#000000", "#ffffff" },
-	{ "#ffffff", "#000000" },
-	{ "#ffffff", "#000000" },
+	{ "#f5c2e7", "#000000" },
+	{ "#cba6f7", "#000000" },
+	{ "#f38ba8", "#000000" },
+	{ "#fab387", "#000000" },
+	{ "#f9e2af", "#000000" },
+	{ "#a6e3a1", "#000000" },
+	{ "#94e2d5", "#000000" },
+	{ "#89dceb", "#000000" },
+	{ "#89b4fa", "#000000" },
+	{ "#b4befe", "#000000" },
 };
 
 static const Rule rules[] = {
