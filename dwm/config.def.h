@@ -36,6 +36,19 @@ static const unsigned int ulinestroke	= 2;	/* thickness / height of the underlin
 static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
 static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
+static const char *tagsel[][2] = {
+	{ "#ff0000", "#000000" },
+	{ "#ff7f00", "#000000" },
+	{ "#ffff00", "#000000" },
+	{ "#00ff00", "#000000" },
+	{ "#0000ff", "#000000" },
+	{ "#4b0082", "#000000" },
+	{ "#9400d3", "#000000" },
+	{ "#000000", "#ffffff" },
+	{ "#ffffff", "#000000" },
+	{ "#ffffff", "#000000" },
+};
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
