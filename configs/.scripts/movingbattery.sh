@@ -19,7 +19,7 @@ elif [ "$battery_level" -ge "60" ]; then
 elif [ "$battery_level" -ge "50" ]; then
   # 50% 
   echo "^r0,10,2,4^^r2,7,22,10^^c#000000^^r3,8,20,8^^c#f9e2af^^r13,8,10,8^^d^^f24^"
-elif [ "$battery_level" -ge "400" ]; then
+elif [ "$battery_level" -ge "40" ]; then
   # 40%
   echo "^r0,10,2,4^^r2,7,22,10^^c#000000^^r3,8,20,8^^c#f9e2af^^r16,8,7,8^^d^^f24^"
 elif [ "$battery_level" -ge "30" ]; then
