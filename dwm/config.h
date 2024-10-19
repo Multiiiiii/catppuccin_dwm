@@ -60,7 +60,7 @@ static const Rule rules[] = {
 	{ "kitty",         NULL,     NULL,           0,         0,          1,           0,        -1,       0  },
 	{ NULL,            NULL,     "Event Tester", 0,         0,          0,           1,        -1,       0  }, /* xev */
 	{ NULL,            NULL,     "scratchpad",   0,         1,          1,           0,        -1,      's' },
-	{ "Mullvad Browser",      NULL,     NULL,   0,         1,          1,           0,        -1,      's' },
+	{"Mullvad Browser",NULL,     NULL,           0,         0,          0,           0,        -1,       0  },
 	{ "vesktop",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
 	{ "ArmCord",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
 	{ "revolt-desktop",NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
@@ -140,7 +140,7 @@ static const char *filemanagercmd2[]  = { "st", "./.config/vifm/scripts/vifmrun"
 static const char *filemanagercmd[]  = { "kitty", "./.config/vifm/scripts/vifmrun", NULL };
 static const char *discordcmd[]  = { "vesktop", NULL };
 static const char *emailcmd[]  = { "thunderbird", NULL };
-static const char *calccmd[]  = { "st", "bc", NULL };
+static const char *calccmd[]  = { "kitty", "bc", NULL };
 /*Screenshot*/
 static const char *selectwindowcmd[] = { "screenshot.sh", "select", NULL };
 static const char *selectareacmd[] = { "screenshot.sh", "area", NULL };
