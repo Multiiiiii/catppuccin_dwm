@@ -12,7 +12,7 @@ name[group1]="German (Neo, no useless)";
 
     // Number row
     // --------------------------------------------------------------
-    key <TLDE> { [ grave,                   dead_caron,              U21BB,                   NoSymbol,                U22C1,           Pointer_EnableKeys,              emptyset,                NoSymbol                 ] };
+    key <TLDE> { [ grave,                   asciicircum,             U21BB,                   NoSymbol,                U22C1,           Pointer_EnableKeys,              emptyset,                NoSymbol                 ] };
 
     key <AE01> { [ 1,                       degree,                  U261E,                   U2196,                   U22C0,                   NoSymbol,                notsign,                 NoSymbol                 ] };
     key <AE02> { [ 2,                       section,                 U2202,                   U2194,                   U221E,                   NoSymbol,                logicalor,               NoSymbol                 ] };
