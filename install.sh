@@ -1,6 +1,7 @@
 
 #!/bin/bash
 
+timedatectl set-ntp true
 read -p "Is this a minimal intsall (no wm)? [Y/n]" yn
 : ${yn:=y}
 if [[ $yn == [Yy]* ]]; then
