@@ -146,6 +146,9 @@ command! reload :write | restart full
 command! sxiv sxiv %d
 command! mpv mpv %d
 command! dragon dragon-drop -a -x %f
+command! pull git pull
+command! commit git add . && git commit -m "updated %d"
+command! push git push
 
 " ------------------------------------------------------------------------------
 " File types association
