@@ -64,7 +64,8 @@ static const Rule rules[] = {
 	{ "vesktop",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
 	{ "ArmCord",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
 	{ "revolt-desktop",NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
-	{ "warp-share",    NULL,     NULL,           0,         1,          0,           0,        -1,       0  },
+	{ "warp",    NULL,     NULL,           0,         1,          0,           0,        -1,       0  },
+	{ "dragon",   "dragon",     "Dragon-drop",           0,         1,          0,           0,        -1,       0  },
 };
 
 /* window following */
