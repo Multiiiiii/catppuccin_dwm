@@ -149,7 +149,9 @@ command! dragon dragon-drop -a -x %f
 command! pull git pull
 command! commit git add . && git commit -m "updated %d"
 command! push git push
-
+command! mupdf mupdf %f 
+command! okular okular %f 
+command! wall xwallpaper --zoom %f
 " ------------------------------------------------------------------------------
 " File types association
 " ------------------------------------------------------------------------------
