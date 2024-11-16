@@ -95,6 +95,10 @@ alias vifm='$HOME/.config/vifm/scripts/vifmrun'
 alias gitconf='git config user.name && git config user.email'
 alias syncplay='QT_STYLE_OVERRIDE=kvantum-dark syncplay'
 alias dolphin='QT_STYLE_OVERRIDE=kvantum-dark dolphin'
+alias wttr='curl https://wttr.in/ilmenau'
+alias hibernate='swaylock && systemctl hibernate'
+alias polkit='/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &'
+alias quote='$HOME/.scripts/quote.sh'
 source /usr/share/autojump/autojump.zsh
 
 export PATH="$PATH:$HOME/.scripts"
