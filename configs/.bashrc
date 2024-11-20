@@ -28,6 +28,7 @@ alias syncplay='QT_STYLE_OVERRIDE=kvantum-dark syncplay'
 alias dolphin='QT_STYLE_OVERRIDE=kvantum-dark dolphin'
 source /usr/share/autojump/autojump.bash
 
+export MANPAGER='nvim +Man!'
 export PATH="$PATH:$HOME/.scripts"
 export HISTCONTROL=ignoreboth
 HISTSIZE=10000
