@@ -102,7 +102,7 @@ alias quote='$HOME/.scripts/quote.sh'
 source /usr/share/autojump/autojump.zsh
 
 export PATH="$PATH:$HOME/.scripts"
-
+export MANPAGER='nvim +Man!'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
