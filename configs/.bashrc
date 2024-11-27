@@ -26,6 +26,8 @@ alias vifm='$HOME/.config/vifm/scripts/vifmrun'
 alias gitconf='git config user.name && git config user.email'
 alias syncplay='QT_STYLE_OVERRIDE=kvantum-dark syncplay'
 alias dolphin='QT_STYLE_OVERRIDE=kvantum-dark dolphin'
+alias cowsay='cowsay -W $(tput cols)'
+alias figlet='figlet -w $(tput cols)'
 source /usr/share/autojump/autojump.bash
 
 export MANPAGER='nvim +Man!'
