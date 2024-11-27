@@ -99,6 +99,8 @@ alias wttr='curl https://wttr.in/ilmenau'
 alias hibernate='swaylock && systemctl hibernate'
 alias polkit='/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &'
 alias quote='$HOME/.scripts/quote.sh'
+alias cowsay='cowsay -W $(tput cols)'
+alias figlet='figlet -w $(tput cols)'
 source /usr/share/autojump/autojump.zsh
 
 export PATH="$PATH:$HOME/.scripts"
