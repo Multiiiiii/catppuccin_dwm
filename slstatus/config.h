@@ -65,7 +65,7 @@ static const char unknown_str[] = "";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ netspeed_tx, "^c#f38ba8^ [UP:%sB/s ",	 "wlp1s0"  },
+	{ netspeed_tx, "^c#f38ba8^     [UP:%sB/s ",	 "wlp1s0"  },
 	{ wifi_perc, "^c#f38ba8^ WiFi:%s%% ",       "wlp1s0"},
 	{ netspeed_rx, "^c#f38ba8^ DOWN:%sB/s] ",	 "wlp1s0"  },
   { run_command, "^c#f9e2af^[%s ]", "./Suckless/Scripts/Vpn.sh"},

@@ -65,7 +65,6 @@ static const Rule rules[] = {
 	{ "ArmCord",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
 	{ "revolt-desktop",NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
 	{ "warp",    NULL,     NULL,           0,         1,          0,           0,        -1,       0  },
-	{ "dragon",   "dragon",     "Dragon-drop",           0,         1,          0,           0,        -1,       0  },
 };
 
 /* window following */
@@ -141,7 +140,7 @@ static const char *filemanagercmd2[]  = { "st", "./.config/vifm/scripts/vifmrun"
 static const char *filemanagercmd[]  = { "kitty", "./.config/vifm/scripts/vifmrun", NULL };
 static const char *discordcmd[]  = { "vesktop", NULL };
 static const char *emailcmd[]  = { "thunderbird", NULL };
-static const char *calccmd[]  = { "kitty", "bc", NULL };
+static const char *calccmd[]  = { "qalculate-qt", NULL };
 /*Screenshot*/
 static const char *selectwindowcmd[] = { "screenshot.sh", "select", NULL };
 static const char *selectareacmd[] = { "screenshot.sh", "area", NULL };

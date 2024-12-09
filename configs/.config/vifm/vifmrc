@@ -152,6 +152,9 @@ command! push git push
 command! mupdf mupdf %f 
 command! okular okular %f 
 command! wall xwallpaper --zoom %f
+command! latex latexmk -pdf -pvc
+command! here :cd %D
+
 " ------------------------------------------------------------------------------
 " File types association
 " ------------------------------------------------------------------------------
