@@ -28,8 +28,7 @@ alias syncplay='QT_STYLE_OVERRIDE=kvantum-dark syncplay'
 alias dolphin='QT_STYLE_OVERRIDE=kvantum-dark dolphin'
 alias cowsay='cowsay -W $(tput cols)'
 alias figlet='figlet -w $(tput cols)'
-alias cowsay='cowsay -W $(tput cols)'
-alias toilet='toilet -w $(tput cols) -f mono12'
+alias toilet='toilet -w $(tput cols) -f smblock'
 source /usr/share/autojump/autojump.bash
 
 export MANPAGER='nvim +Man!'
@@ -43,6 +42,13 @@ HISTFILESIZE=500000
 #fi
 
 PS1='[\u@\h][\w]\$ '
-fastfetch --load-config default.jsonc
-#./.scripts/quote.sh | cowsay -f kosh
-
+if [ $(tput cols) -gt 200 ]; then
+    fastfetch --load-config default.jsonc
+    quote | toilet 
+elif [ $(tput cols) -gt 124 ]; then
+    wttr 
+elif [ $(tput cols) -gt 92 ]; then
+    fastfetch --load-config default.jsonc
+else
+   quote
+fi

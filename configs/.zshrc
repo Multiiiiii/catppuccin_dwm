@@ -101,7 +101,7 @@ alias polkit='/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &'
 alias quote='$HOME/.scripts/quote.sh'
 alias cowsay='cowsay -W $(tput cols)'
 alias figlet='figlet -w $(tput cols)'
-alias toilet='toilet -w $(tput cols) -f mono12'
+alias toilet='toilet -w $(tput cols) -f smblock'
 source /usr/share/autojump/autojump.zsh
 
 export PATH="$PATH:$HOME/.scripts"
@@ -113,5 +113,16 @@ alias mkdir='mkdir -p'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-fastfetch
-#./.scripts/quote.sh | cowsay -f kosh
+if [ $(tput cols) -gt 200 ]; then
+    fastfetch
+    quote | toilet 
+elif [ $(tput cols) -gt 124 ]; then
+    wttr 
+elif [ $(tput cols) -gt 92 ] && [ $(tput lines) -gt 32 ]; then
+    fastfetch
+    quote | cowsay -f kosh
+elif [ $(tput lines) -gt 25 ]; then
+    quote | cowsay -f kosh
+else
+   quote
+fie.sh | cowsay -f kosh
