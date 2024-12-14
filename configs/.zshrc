@@ -101,6 +101,7 @@ alias polkit='/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &'
 alias quote='$HOME/.scripts/quote.sh'
 alias cowsay='cowsay -W $(tput cols)'
 alias figlet='figlet -w $(tput cols)'
+alias toilet='toilet -w $(tput cols) -f mono12'
 source /usr/share/autojump/autojump.zsh
 
 export PATH="$PATH:$HOME/.scripts"

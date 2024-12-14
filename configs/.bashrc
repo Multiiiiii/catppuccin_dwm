@@ -28,6 +28,8 @@ alias syncplay='QT_STYLE_OVERRIDE=kvantum-dark syncplay'
 alias dolphin='QT_STYLE_OVERRIDE=kvantum-dark dolphin'
 alias cowsay='cowsay -W $(tput cols)'
 alias figlet='figlet -w $(tput cols)'
+alias cowsay='cowsay -W $(tput cols)'
+alias toilet='toilet -w $(tput cols) -f mono12'
 source /usr/share/autojump/autojump.bash
 
 export MANPAGER='nvim +Man!'
