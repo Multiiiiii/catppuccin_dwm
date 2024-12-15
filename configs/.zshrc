@@ -120,9 +120,10 @@ elif [ $(tput cols) -gt 124 ]; then
     wttr 
 elif [ $(tput cols) -gt 92 ] && [ $(tput lines) -gt 32 ]; then
     fastfetch
-    quote | cowsay -f kosh
+    quote | cowsay -f tux
 elif [ $(tput lines) -gt 25 ]; then
-    quote | cowsay -f kosh
+    fastfetch
+    quote
 else
    quote
-fie.sh | cowsay -f kosh
+fi

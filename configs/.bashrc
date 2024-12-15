@@ -47,8 +47,12 @@ if [ $(tput cols) -gt 200 ]; then
     quote | toilet 
 elif [ $(tput cols) -gt 124 ]; then
     wttr 
-elif [ $(tput cols) -gt 92 ]; then
+elif [ $(tput cols) -gt 92 ] && [ $(tput lines) -gt 32 ]; then
     fastfetch --load-config default.jsonc
+    quote | cowsay -f tux
+elif [ $(tput lines) -gt 25 ]; then
+    fastfetch --load-config default.jsonc
+    quote
 else
    quote
 fi
