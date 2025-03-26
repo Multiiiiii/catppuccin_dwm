@@ -11,8 +11,8 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad            = 10;       /* vertical padding of bar */
-static const int sidepad            = 10;       /* horizontal padding of bar */
+static const int vertpad            = 00;       /* vertical padding of bar */
+static const int sidepad            = 00;       /* horizontal padding of bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 
@@ -52,8 +52,9 @@ static const Rule rules[] = {
 	{ "Gimp",          NULL,     NULL,           0,         1,          0,           0,        -1,       0  },
 	{ "thunderbird",   NULL,     NULL,           1 << 4,    0,          0,           0,        -1,       0  },
 	{ "firefox",       NULL,     NULL,           1 << 8,    0,          0,          -1,        -1,       0  },
-	{ NULL,            NULL,"Picture-in-Picture",0,         1,          0,          -1,        -1,       0  },
+	{ "Picture-in-Picture", NULL,"Picture-in-Picture",0,         1,          0,          -1,        -1,       0  },
 	{ "Lollypop",      NULL,     NULL,           1 << 3,    0,          0,          -1,        -1,       0  },
+	{ "Spotify",      NULL,     NULL,           1 << 3,    0,          0,          -1,        -1,       0  },
 	{ "Mullvad VPN",   NULL,     NULL,           1 << 7,    1,          0,          -1,        -1,       0  },
 	{ "qBittorrent",   NULL,     NULL,           1 << 7,    0,          0,          -1,        -1,       0  },
 	{ "St",            NULL,     NULL,           0,         0,          1,           0,        -1,       0  },
@@ -122,8 +123,8 @@ static const char *scratchpad2cmd[] = {"s", "kitty", "-T", "scratchpad", NULL};
 static const char *termcmd2[]  = { "kitty", NULL };
 /*Media controlls*/
 static const char *playpause[]  = { "playerctl", "play-pause" };
-static const char *volupcmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+1000", NULL };
-static const char *voldowncmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-1000", NULL };
+static const char *volupcmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+2500", NULL };
+static const char *voldowncmd[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-2500", NULL };
 static const char *mutevolcmd[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
 static const char *mutemiccmd[] = { "pactl", "set-source-mute", "@DEFAULT_SOURCE@", "toggle", NULL };
 static const char *nextcmd[] = { "playerctl", "next", NULL };
