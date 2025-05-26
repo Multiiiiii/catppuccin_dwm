@@ -30,11 +30,11 @@ available_outputs=$(xrandr | awk '/ connected/{print $1}')
 
 check_escape
 # Prompt to select output
-selected_output=$(printf "%s\n" "${available_outputs[@]}" | dmenu -l $(echo "$available_outputs" | wc -l) -i -p "Select output:")
+selected_output=$(printf "%s\n" "${available_outputs[@]}" | dmenu -i -p "Select output:")
 
 check_escape
 # Get the selected position from dmenu
-selected_position=$(printf "%s\n" "${!position_args[@]}" | dmenu -l ${#position_args[@]} -i -p "Select position:")
+selected_position=$(printf "%s\n" "${!position_args[@]}" | dmenu -i -p "Select position:")
 
 
 check_escape
@@ -43,7 +43,7 @@ resolutions=$(get_available_resolutions "$selected_output")
 
 check_escape
 # Get the selected resolution from dmenu
-selected_resolution=$(printf "%s\n" "${resolutions[@]}" | dmenu -l $(echo "$resolutions" | wc -l) -i -p "Select resolution:")
+selected_resolution=$(printf "%s\n" "${resolutions[@]}" | dmenu -i -p "Select resolution:")
 
 # Apply the selected resolution using xrandr
 if [ -n "$selected_resolution" ] && [ -n "$selected_position" ] && [ -n "$selected_output" ]; then
