@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int gappih    = 20;       /* horiz inner gap between windows */
@@ -135,7 +135,7 @@ static const char *brightupcmd[] = { "brightnessctl", "set", "+10", NULL };
 static const char *brightdowncmd[] = { "brightnessctl", "set", "10-", NULL };
 
 static const char *lockcmd[] = { "betterlockscreen", "-l", NULL };
-static const char *screencmd[] = { "screen", NULL };
+static const char *screencmd[] = { ".scripts/screen", NULL };
 static const char *browsercmd[]  = { "mullvad-browser", NULL };
 static const char *filemanagercmd2[]  = { "st", "./.config/vifm/scripts/vifmrun", NULL };
 static const char *filemanagercmd[]  = { "kitty", "./.config/vifm/scripts/vifmrun", NULL };
@@ -227,7 +227,7 @@ static const Key keys[] = {
   { MODKEY|ShiftMask,             XK_v,      setlayout,      {.v = &layouts[12]} }, /*centeredfloatingmaster*/
 
   /*Visuals*/
-	{ 0,                            XK_F4,     spawn,          {.v = setbg} },
+	{ MODKEY,                       XK_F4,     spawn,          {.v = setbg} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
