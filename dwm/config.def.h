@@ -51,11 +51,11 @@ static const Rule rules[] = {
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor  scratch key */
 	{ "Gimp",          NULL,     NULL,           0,         1,          0,           0,        -1,       0  },
 	{ "thunderbird",   NULL,     NULL,           1 << 4,    0,          0,           0,        -1,       0  },
-	{ "librewolf",       NULL,     NULL,           1 << 8,    0,          0,          -1,        -1,       0  },
-	{ "Picture-in-Picture", NULL,"Picture-in-Picture",0,         1,          0,          -1,        -1,       0  },
+	{ "librewolf",     NULL,     NULL,           1 << 8,    0,          0,          -1,        -1,       0  },
+	{ "Picture-in-Picture", NULL,"Picture-in-Picture",0,    1,          0,          -1,        -1,       0  },
 	{ "Lollypop",      NULL,     NULL,           1 << 3,    0,          0,          -1,        -1,       0  },
-	{ "Spotify",      NULL,     NULL,           1 << 3,    0,          0,          -1,        -1,       0  },
-	{ "Mullvad VPN",   NULL,     NULL,           1 << 7,    1,          0,          -1,        -1,       0  },
+	{ "Spotify",       NULL,     NULL,           1 << 3,    0,          0,          -1,        -1,       0  },
+	{ "Mullvad VPN",   NULL,     NULL,           0,         1,          0,          -1,        -1,       0  },
 	{ "qBittorrent",   NULL,     NULL,           1 << 7,    0,          0,          -1,        -1,       0  },
 	{ "St",            NULL,     NULL,           0,         0,          1,           0,        -1,       0  },
 	{ "kitty",         NULL,     NULL,           0,         0,          1,           0,        -1,       0  },
@@ -65,7 +65,7 @@ static const Rule rules[] = {
 	{ "vesktop",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
 	{ "ArmCord",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
 	{ "revolt-desktop",NULL,     NULL,           1 << 2,    0,          0,           0,        -1,       0  },
-	{ "warp",    NULL,     NULL,           0,         1,          0,           0,        -1,       0  },
+	{ "warp",          NULL,     NULL,           0,         1,          0,           0,        -1,       0  },
 };
 
 /* window following */
