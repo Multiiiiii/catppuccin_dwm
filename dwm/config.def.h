@@ -148,6 +148,8 @@ static const char *selectareacmd[] = { "screenshot.sh", "area", NULL };
 static const char *activewindowcmd[] = { "screenshot.sh", "window", NULL };
 static const char *fullscreencmd[] = {"screenshot.sh", "full", NULL };
 static const char *setbg[] = {"setbg", NULL };
+static const char *redshiftoff[] = {"redshift", "-x", NULL};
+static const char *redshifton[] = {"redshift", "-O", "3000", NULL};
 
 
 
@@ -169,18 +171,20 @@ static const Key keys[] = {
 
   { 0,                       0x1008FF1d,      spawn,         {.v = calccmd } },
 
+	{ ShiftMask,                    XK_F11,    spawn,          {.v = redshiftoff} },
+	{ 0,                            XK_F11,    spawn,          {.v = redshifton} },
   /*Screenshots*/
-  { 0,                             XK_Print,  spawn,         {.v = activewindowcmd } },
-  { MODKEY,                        XK_Print,  spawn,         {.v = fullscreencmd } },
-  { MODKEY|ShiftMask,              XK_Print,  spawn,         {.v = selectareacmd } },
-  { MODKEY|ShiftMask,              XK_grave,  spawn,         {.v = selectwindowcmd } },
+  { 0,                            XK_Print,  spawn,         {.v = activewindowcmd } },
+  { MODKEY,                       XK_Print,  spawn,         {.v = fullscreencmd } },
+  { MODKEY|ShiftMask,             XK_Print,  spawn,         {.v = selectareacmd } },
+  { MODKEY|ShiftMask,             XK_grave,  spawn,         {.v = selectwindowcmd } },
 
   /*Launching stuff*/ 
   { Mod4Mask,                     XK_t,      spawn,          {.v = lockcmd } },
   { Mod4Mask,                     XK_q,      spawn,          {.v = screencmd } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = filemanagercmd } },
-	{ MODKEY|Mod4Mask,             XK_e,      spawn,          {.v = filemanagercmd2 } },
+	{ MODKEY|Mod4Mask,              XK_e,      spawn,          {.v = filemanagercmd2 } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = discordcmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = emailcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
