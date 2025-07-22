@@ -131,8 +131,8 @@ static const char *nextcmd[] = { "playerctl", "next", NULL };
 static const char *prevcmd[] = { "playerctl", "previous", NULL };
 
 /*Brighness*/
-static const char *brightupcmd[] = { "brightnessctl", "set", "+10", NULL };
-static const char *brightdowncmd[] = { "brightnessctl", "set", "10-", NULL };
+static const char *brightupcmd[] = { "brightnessctl", "set", "+10%", NULL };
+static const char *brightdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
 
 static const char *lockcmd[] = { "betterlockscreen", "-l", NULL };
 static const char *screencmd[] = { ".scripts/screen", NULL };
