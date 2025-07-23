@@ -1,14 +1,14 @@
-
 #!/bin/bash
 
-# Query the mute status of source #1539
-MUTE_STATUS=$(pactl list sources | grep -A 10 'input' | grep 'Mute:' | awk '{print $2}')
+# Get the default source (microphone)
+default_source=$(pactl get-default-source)
 
-# Check if the mute status is 'yes' or 'no'
-if [ "$MUTE_STATUS" == "yes" ]; then
-    # If muted, output the Unicode symbol for muted ()
-    echo "  "
+# Get the mute status of the default source
+mute_status=$(pactl get-source-mute "$default_source" | awk '{print $2}')
+
+# Output the result
+if [ "$mute_status" = "yes" ]; then
+    echo " "
 else
-    # If not muted, output the Unicode symbol for unmuted ()
     echo ""
 fi
