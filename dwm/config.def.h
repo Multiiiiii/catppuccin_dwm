@@ -116,6 +116,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucalccmd[] = { "./dmenu-calc/dmenu-calc", NULL };
 static const char *termcmd[]  = { "st", NULL };
 /*First arg only serves to match against key in rules*/
 static const char *scratchpadcmd[] = {"s", "st", "-t", "scratchpad", NULL}; 
@@ -188,6 +189,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = discordcmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = emailcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_z,      spawn,          {.v = dmenucalccmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd2 } },
 	{ MODKEY|Mod4Mask,              XK_Return, spawn,          {.v = termcmd } },
 

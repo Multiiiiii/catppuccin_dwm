@@ -81,6 +81,7 @@ echo "
                               |___/
 
 "
+git clone https://github.com/Helcoume/dmenu-calc.git
 ./scripts/makesuckless.sh
 echo "
                       _                   _       _    __ _ _
