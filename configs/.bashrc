@@ -21,7 +21,9 @@ alias vim='nvim'
 alias svim='sudo nvim'
 alias noorphans='sudo pacman -Rns $(pacman -Qtdq)'
 alias ytdl='yt-dlp -o "~/Videos/%(title)s.%(ext)s"'
-alias ytdlm='yt-dlp -x --audio-format opus -o "/home/m/Music/%(title)s.%(ext)s"'
+alias alias ytdlm='yt-dlp -x --audio-format opus \
+  --embed-metadata --add-metadata --embed-thumbnail \
+  -o "%(title)s.%(ext)s"'
 alias vifm='$HOME/.config/vifm/scripts/vifmrun'
 alias gitconf='git config user.name && git config user.email'
 alias syncplay='QT_STYLE_OVERRIDE=kvantum-dark syncplay'
