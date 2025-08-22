@@ -45,15 +45,15 @@ HISTFILESIZE=500000
 
 PS1='[\u@\h][\w]\$ '
 if [ $(tput cols) -gt 200 ]; then
-    fastfetch --load-config default.jsonc
+    fastfetch --config default.jsonc
     quote | toilet 
 elif [ $(tput cols) -gt 124 ]; then
     wttr 
 elif [ $(tput cols) -gt 92 ] && [ $(tput lines) -gt 32 ]; then
-    fastfetch --load-config default.jsonc
+    fastfetch --config default.jsonc
     quote | cowsay -f tux
 elif [ $(tput lines) -gt 25 ]; then
-    fastfetch --load-config default.jsonc
+    fastfetch --config default.jsonc
     quote
 else
    quote
