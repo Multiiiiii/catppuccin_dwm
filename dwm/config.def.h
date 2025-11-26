@@ -50,7 +50,7 @@ static const Rule rules[] = {
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor  scratch key */
 	{ "Gimp",          NULL,     NULL,           0,         1,          0,           0,        -1,       0  },
-	{ "thunderbird",   NULL,     NULL,           1 << 4,    0,          0,           0,        -1,       0  },
+	{ "Thunderbird",   NULL,     NULL,           1 << 4,    0,          0,           0,        -1,       0  },
 	{ "librewolf",     NULL,     NULL,           1 << 8,    0,          0,          -1,        -1,       0  },
 	{ "Picture-in-Picture", NULL,"Picture-in-Picture",0,    1,          0,          -1,        -1,       0  },
 	{ "Strawberry",      NULL,     NULL,           1 << 3,    0,          0,          -1,        -1,       0  },

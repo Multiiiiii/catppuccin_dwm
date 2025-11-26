@@ -50,10 +50,10 @@ static const Rule rules[] = {
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor  scratch key */
 	{ "Gimp",          NULL,     NULL,           0,         1,          0,           0,        -1,       0  },
-	{ "thunderbird",   NULL,     NULL,           1 << 4,    0,          0,           0,        -1,       0  },
+	{ "Thunderbird",   NULL,     NULL,           1 << 4,    0,          0,           0,        -1,       0  },
 	{ "librewolf",     NULL,     NULL,           1 << 8,    0,          0,          -1,        -1,       0  },
 	{ "Picture-in-Picture", NULL,"Picture-in-Picture",0,    1,          0,          -1,        -1,       0  },
-	{ "Lollypop",      NULL,     NULL,           1 << 3,    0,          0,          -1,        -1,       0  },
+	{ "Strawberry",      NULL,     NULL,           1 << 3,    0,          0,          -1,        -1,       0  },
 	{ "Spotify",       NULL,     NULL,           1 << 3,    0,          0,          -1,        -1,       0  },
 	{ "Mullvad VPN",   NULL,     NULL,           0,         1,          0,          -1,        -1,       0  },
 	{ "qBittorrent",   NULL,     NULL,           1 << 7,    0,          0,          -1,        -1,       0  },
@@ -117,6 +117,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenucalccmd[] = { "./dmenu-calc/dmenu-calc", NULL };
+static const char *clipmenucmd[] = { "clipmenu", NULL };
 static const char *termcmd[]  = { "st", NULL };
 /*First arg only serves to match against key in rules*/
 static const char *scratchpadcmd[] = {"s", "st", "-t", "scratchpad", NULL}; 
@@ -190,6 +191,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = emailcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_z,      spawn,          {.v = dmenucalccmd } },
+	{ MODKEY,                       XK_v,      spawn,          {.v = clipmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd2 } },
 	{ MODKEY|Mod4Mask,              XK_Return, spawn,          {.v = termcmd } },
 
